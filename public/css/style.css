@@ -1,0 +1,213 @@
+/* Dashboard Modern Design */
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --primary-color: #4a90e2; /* Azul moderno */
+    --primary-hover: #357ABD; /* Azul más oscuro */
+    --secondary-color: rgba(255, 255, 255, 0.7); /* Transparencia ligera */
+    --background-color: #f4f7fa; /* Gris claro */
+    --card-bg: rgba(255, 255, 255, 0.85); /* Fondo para tarjetas */
+    --text-color: #333; /* Texto principal */
+    --muted-text: #888; /* Texto secundario */
+    --border-radius: 12px;
+    --shadow-light: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    color: var(--text-color);
+}
+
+.sidebar h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+}
+
+.sidebar a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--muted-text);
+}
+
+/* Buttons */
+button,
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+button:hover,
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Table */
+.table-responsive {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.table td {
+    padding: 12px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.boton{
+    background: none;
+    padding: none;
+    margin-top: 2px;
+    color: #4a90e2;
+}
+.boton:hover{
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+.dataTables_filter {
+   margin-bottom: 10px;
+}
+img{
+    border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    color: white;
+    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.navbar .nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar h5 {
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar h5,
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    button,
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
